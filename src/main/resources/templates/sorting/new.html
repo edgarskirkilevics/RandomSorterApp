@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Random Sorting</title>
+<link th:href="@{/css/style.css}" href="/css/main.css"  rel="stylesheet" type="text/css"  />
+</head>
+    <body>
+    <div id="container">
+    <div id="header">
+		<h1>Random Sorter Application</h1>
+	</div>
+	<div class="new_form">
+        <form action="#" th:action="@{/sorting/create}" th:object="${randomSort}" method="post">
+            <table>
+                <tr>
+                    <td>String for Sorting (use ; for separating):</td>
+                    <td><input type="text" th:field="*{givenString}" /></td>
+                    <td class="errorMsg" th:if="${#fields.hasErrors('givenString')}" th:errors="*{givenString}">Random String Error</td>
+                </tr>
+                <tr>
+                    <td>String for Positions (use ; for separating, don't use 0):</td>
+                    <td><input type="text" th:field="*{positionString}" /></td>
+                    <td class="errorMsg" th:if="${#fields.hasErrors('positionString')}" th:errors="*{positionString}">Position String Error</td>
+                    <td class="errorMsg" th:if="${error != null}" th:text="${error}">Positions Max Value Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+        <div class="back_button"><a href="/sorting/"><button class="go_back" >Back</button></a></div>
+         <div id="footer">Created by Edgars Kirkilevics</div>
+        </div>
+    </body>
+</html>

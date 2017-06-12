@@ -1,0 +1,101 @@
+#header {
+    padding: 1rem;
+    height: 50px;
+    color: white;
+    background-color: #010250;
+    clear: left;
+    text-align: center;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  background-color: #010250;
+  text-align: center;
+}
+
+#result_list {
+    border-collapse: collapse;
+    /* width: 100%;
+     height: 700px;
+     overflow: auto; */
+}
+
+#result_list th, #result_list td {
+    text-align: left;
+    padding: 8px;
+    width: 250px;
+    word-wrap: break-word;
+}
+
+.result_list tr:nth-child(even){background-color: #f2f2f2}
+
+.result_list th {
+    background-color: #010250;
+    color: white;
+}
+
+.result_list thead, .result_list tbody, .result_list tr, .result_list th, .result_list td { display: block; }
+
+.result_list tr:after {  /* clearing float */
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.result_list tbody {
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.result_list tbody td, .result_list thead th {
+    width: 23.7%;
+    float: left;
+}
+
+.errorMsg { 
+	color: #FF0000 
+}
+
+.new_form{
+	padding-top: 25px;
+	padding-left: 25px;
+}
+
+.back_button{
+	padding-top: 25px;
+	padding-left: 25px;
+}
+
+.add_new{ 
+	text-align: center; 
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}

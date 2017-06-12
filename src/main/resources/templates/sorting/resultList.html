@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Random Sorting</title>
+<link th:href="@{/css/style.css}" href="/css/main.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Random Sorter Application</h1>
+		</div>
+		<div id="wrapper" align="center">
+		<table class="result_list" id="result_list" align="center">
+			<thead>
+				<tr>
+					<th>Array of values</th>
+					<th>Positions</th>
+					<th>Result</th>
+					<th>Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-th-each="result : ${randomSortResult}">
+					<td class="givenString" data-th-text="${result.givenString}"></td>
+					<td class="positionString" data-th-text="${result.positionString}"></td>
+					<td class="resultString" data-th-text="${result.resultString}"></td>
+					<td class="expendedTime" data-th-text="${result.expendedTime}"></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<div style="text-align:center">  
+		<a href="/sorting/new"><button class="add_new" >Add new sorting</button></a>
+		</div>
+		<div id="footer">Created by Edgars Kirkilevics</div>
+	</div>
+</body>
+</html>
