@@ -37,10 +37,12 @@ public class SortResultDaoImpl implements SortResultDao {
 		long startTime = System.nanoTime();
 		Sorting sorting = new Sorting();	
 		
-		long endTime   = System.nanoTime();
+		String RandomSortResult = sorting.getSortResult(sortResult);
+        sortResult.setResultString(RandomSortResult);
+		
+        long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;        
         
-        sortResult.setResultString(sorting.getSortResult(sortResult));
         sortResult.setExpendedTime(estametedTimeCalc(totalTime));
 		
 		entityManager.persist(sortResult);
