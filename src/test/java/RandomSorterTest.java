@@ -1,19 +1,23 @@
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ek.sorter.RandomSorterApp;
+import com.ek.sorter.logic.Sorting;
+import com.ek.sorter.model.SortResult;
 
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = RandomSorterApp.class)
-@WebAppConfiguration
 public class RandomSorterTest {
-
-	@Test
-	public void contextLoads() {
-	}
+	 
+	@Autowired
+	private SortResult sortResult;
+	
+    @Test
+    public void testSorter(){
+    	
+    	String givenString = "1;2;4;3;10;5;11";
+    	String positionString = "1;2;3;4;5;6;7";
+    	
+    	sortResult = new SortResult(givenString, positionString);
+    	Sorting sorting = new Sorting();    	
+    	Assert.assertEquals("1;2;3;4;5;10;11", sorting.getSortResult(sortResult));
+    }
 }

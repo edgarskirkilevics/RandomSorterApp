@@ -32,6 +32,11 @@ public class SortResult {
 
     public SortResult() {
     }
+    
+    public SortResult(String givenString, String positionString) {
+    	this.givenString = givenString;
+    	this.positionString = positionString;
+    }
 
 	public int getId() {
 		return id;
