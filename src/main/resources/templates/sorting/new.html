@@ -16,12 +16,13 @@
                     <td>String for Sorting (use ; for separating):</td>
                     <td><input type="text" th:field="*{givenString}" /></td>
                     <td class="errorMsg" th:if="${#fields.hasErrors('givenString')}" th:errors="*{givenString}">Random String Error</td>
+             		<td class="errorMsg" th:if="${error2 != null}" th:text="${error2}">Max Value Error</td>
                 </tr>
                 <tr>
                     <td>String for Positions (use ; for separating, don't use 0):</td>
                     <td><input type="text" th:field="*{positionString}" /></td>
                     <td class="errorMsg" th:if="${#fields.hasErrors('positionString')}" th:errors="*{positionString}">Position String Error</td>
-                    <td class="errorMsg" th:if="${error != null}" th:text="${error}">Positions Max Value Error</td>
+                    <td class="errorMsg" th:if="${error1 != null}" th:text="${error1}">Positions Max Value Error</td>
                 </tr>
                 <tr>
                     <td><button type="submit">Submit</button></td>

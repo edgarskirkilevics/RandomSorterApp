@@ -50,10 +50,14 @@ public class RandomSortController {
              return model;
          } else {
         String error = errorService.getError(randomSort).toString();
-        if(error.equals("error")){
-			model.addObject("error", "Position has larger number of elements than in Random Number String");
+        if(error.equals("error1")){
+			model.addObject("error1", "Position has larger number of elements than in Random Number String");
 			model.setViewName("sorting/new");
 			return model;
+        }else if(error.equals("error2")){
+				model.addObject("error2", "Inputed value is larger than maximum allowed for integer");
+				model.setViewName("sorting/new");
+				return model;
         }else{
 		    	sortResultService.addRandomSorting(randomSort);
 	        	return new ModelAndView("redirect:/sorting");
